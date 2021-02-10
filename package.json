@@ -29,7 +29,6 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0",
-    "yarn": "^0.13.0"
   },
   "author": "Jesuva",
   "license": "ISC",
