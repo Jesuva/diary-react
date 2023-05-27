@@ -1,0 +1,2 @@
+`Testing pr template`
+{{number}}
