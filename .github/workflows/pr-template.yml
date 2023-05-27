@@ -1,0 +1,21 @@
+name: Update PR Template
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  update_template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set PR Number
+        run: |
+          echo "PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = \"/\" } ; { print $3 }')" >> $GITHUB_ENV
+
+      - name: Update PR Template
+        run: |
+          sed -i "s/<PR_NUMBER_PLACEHOLDER>/$PR_NUMBER/g" .github/PULL_REQUEST_TEMPLATE.md
+        env:
+          PR_NUMBER: ${{ env.PR_NUMBER }}

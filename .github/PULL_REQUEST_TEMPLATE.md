@@ -1,2 +1,2 @@
 `Testing pr template`
-{{number}}
+<PR_NUMBER_PLACEHOLDER>
